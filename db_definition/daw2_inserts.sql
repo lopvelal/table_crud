@@ -9,24 +9,38 @@
 set names utf8;
 set sql_mode = 'traditional';
 
+create table daw2_frutas (
+id integer unsigned auto_increment  primary key
+,nombre varchar(20) unique not null 
+,categoria varchar(20) not null 
+,descripcion varchar (250) not null 
+,precio decimal (5,2) not null
+,fecha_compra timestamp not null default now()
+,fecha_venta timestamp null
+)
+engine = myisam;
 
 
-
-insert into daw2_roles
-  (rol					, descripcion) values
-  ('administradores'	,'Administradores de la aplicación')
-, ('usuarios'			,'Todos los usuarios incluido anónimo')
-, ('usuarios_logueados'	,'Todos los usuarios excluido anónimo')
+insert into daw2_frutas (nombre,categoria,descripcion,precio)values
+('manzanaa','golden','manzana golden',1000)
 ;
 
 
-insert into daw2_usuarios 
-  (login, email, password, fecha_alta ,fecha_confirmacion_alta, clave_confirmacion) values
-  ('admin', 'admin@email.com', md5('admin00'), default, now(), null)
-, ('anonimo', 'anonimo@email.com', md5(''), default, now(), null)
-, ('juan', 'juan@email.com', md5('juan00'), default, now(), null)
-, ('anais', 'anais@email.com', md5('anais00'), default, now(), null)
-;
+-- insert into daw2_roles
+--   (rol					, descripcion) values
+--   ('administradores'	,'Administradores de la aplicación')
+-- , ('usuarios'			,'Todos los usuarios incluido anónimo')
+-- , ('usuarios_logueados'	,'Todos los usuarios excluido anónimo')
+-- ;
+-- 
+
+-- insert into daw2_usuarios 
+--   (login, email, password, fecha_alta ,fecha_confirmacion_alta, clave_confirmacion) values
+--   ('admin', 'admin@email.com', md5('admin00'), default, now(), null)
+-- , ('anonimo', 'anonimo@email.com', md5(''), default, now(), null)
+-- , ('juan', 'juan@email.com', md5('juan00'), default, now(), null)
+-- , ('anais', 'anais@email.com', md5('anais00'), default, now(), null)
+-- ;
 
 -- insert into daw2_metodos
 --   (controlador,		metodo) values

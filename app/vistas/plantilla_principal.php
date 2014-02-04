@@ -26,58 +26,37 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo URL_ROOT; ?>recursos/css/administrator.css" />
 		<?php endif; ?>
 		
-		<script type='text/javascript' src="<?php echo URL_ROOT."recursos".DS."js".DS."jquery".DS."jquery-1.10.2.min.js"; ?>" ></script>
-		<script type='text/javascript' src="<?php echo URL_ROOT."recursos".DS."js".DS."general.js"; ?>" ></script>
-		<script type="text/javascript" src=""></script>
 		
-		<script type="text/javascript" >
-			/* líneas del script */
-			function saludo() {
-				alert("Bienvenido al primer ejercicio de Desarrollo Web en Entorno Servidor");
-			}
-		</script>
+		<script src="<?php echo URL_ROOT?>recursos/js/jquery/jquery-1.10.2.min.js"></script>
 		
 	</head>
 
-	<body onload='onload();'>
+	<body onload='onload();' style="background-color:#EBEBEB">
 	
 		<!-- Contenido que se visualizará en el navegador, organizado con la ayuda de etiquetas html -->
 		<div id="inicio"></div>
 		<div id="encabezado">
-			<img src="<?php echo URL_ROOT; ?>recursos/imagenes/ipv_ies_palomeras.png" alt="logo" title="Logo" onclick="window.location.assign('http://www.iespalomeras.net/');"/>
-			<img src="<?php echo URL_ROOT; ?>recursos/imagenes/departamento_informatica.png" alt="logo" title="Logo departamento"  onclick="window.location.assign('http://www.iespalomeras.net/index.php?option=com_wrapper&view=wrapper&Itemid=86');" />
-			<h1 id="titulo">
-			<?php if (isset($_GET["administrator"])): ?>
-				Administrator:
-			<?php endif; ?>
-			Aplicación con patrón MVC</h1>
+			<img src="<?php echo URL_ROOT; ?>recursos/imagenes/trg0ki1391370510.gif" alt="logo" style ="margin-left:30%;"title="Logo"/>
+			<!--<img src="<?php echo URL_ROOT; ?>recursos/imagenes/departamento_informatica.png" alt="logo" title="Logo departamento"  onclick="window.location.assign('http://www.iespalomeras.net/index.php?option=com_wrapper&view=wrapper&Itemid=86');" />-->
+			
 		</div>
 		
 		
 		
 		<div id="div_menu" >
-			<fieldset>
-				<legend>Menú - Índice - Barra de navegación:</legend>
-					<ul id="menu" class="menu">
-<!--						<li class="item"><a href="<?php //echo \core\URL::generar(); ?>" title="Inicio">Inicio</a></li>-->
-						<?php echo \core\HTML_Tag::li_menu("item", array("inicio"), "Inicio"); ?>
-<!--						<li class="item"><a href="<?php //echo \core\URL::generar("revista"); ?>" title="Revista">Revista</a></li>-->
-						<?php echo \core\HTML_Tag::li_menu("item", array("revista"), "Revista"); ?>
-<!--						<li class="item"><a href="<?php //echo \core\URL::generar("libros"); ?>" title="Libros leídos">Libros</a></li>-->
-						<?php echo \core\HTML_Tag::li_menu("item", array("libros"), "Libros"); ?>
-						
-<!--						<li class="item"><a href="<?php //echo \core\URL::generar("inicio/internacional"); ?>" title="Internacional">Internacional</a></li>-->
-						<?php echo \core\HTML_Tag::li_menu("item", array("inicio", "internacional"), "Internacional"); ?>
-						
-						
-<!--						<li class="item"><a href="<?php //echo \core\URL::generar("usuarios"); ?>" title="Usuarios">Usuarios</a></li>-->
-						<?php echo \core\HTML_Tag::li_menu("item", array("usuarios"), "Usuarios"); ?>
-<!--						<li class="item"><a href="<?php //echo \core\URL::generar("categorias"); ?>" title="Categorías">Categorías</a></li>-->
-						<?php echo \core\HTML_Tag::li_menu("item", array("categorias"), "Categorias"); ?>
-						
-<!--						<li class="item"><a href="<?php //echo \core\URL::generar("articulos"); ?>" title="Artículos">Artículos</a></li>-->
-						<?php echo \core\HTML_Tag::li_menu("item", array("articulos"), "Artículos"); ?>
+			<fieldset style="background-color:#C0C0C0">
+			    
+				<legend>Menú</legend>
+					<ul id="css3menu1" class="topmenu">
+					    <li class="topfirst"><a href="<?php echo \core\URL::generar("inicio/index"); ?>" style="height:32px;line-height:32px;"><img src="<?php echo URL_ROOT; ?>recursos/imagenes/menu/home.png" alt=""/>Inicio</a></li>
+					    <li class="toplast"><a style="height:32px;line-height:32px;"><span><img src="<?php echo URL_ROOT; ?>recursos/imagenes/menu/service2.png" alt=""/>Frutas</span></a>
+					    <ul>
+						<li><a href="<?php echo \core\URL::generar("frutas/index"); ?>"><img src="<?php echo URL_ROOT; ?>recursos/imagenes/menu/service3.png" alt=""/>Tabla de Frutas</a></li>
+					    </ul>
+					    </li>
+
 					</ul>
+			
 			</fieldset>
 		</div>
 
@@ -90,38 +69,17 @@
 		</div>
 
 	
-		<div id="pie">
-			
+		<div id="pie" style="float:left;">
+			<br/>
+			<br/>
+			<br/>
+			<br/>
 			Pie del documento.<br />
-			Documento creado por Jesús María de Quevedo Tomé. <a href="mailto:jequeto@gmail.com">Contactar</a><br />
-			Fecha última actualización: 15 de diciembre de 2013.
+			Documento creado por Alfonso López Velasco y Sergio Benito Cano.
+			FRUTAS PALOMERAS<br />
 		</div>
 		
 		<?php echo \core\HTML_Tag::post_request_form(); ?>
-		
-		
-		<script type="text/javascript" />
-			var alerta;
-			function onload() {
-				visualizar_alerta();
-			}
-
-			function visualizar_alerta() {
-				if (alerta != undefined) {
-					$("body").css("opacity","0.3").css("filter", "alpha(opacity=30)");
-					alert(alerta);
-					alerta = undefined;
-					$("body").css("opacity","1.0").css("filter", "alpha(opacity=100)");
-				}
-			}
-
-		</script>
-
-	
-
-	
-		
-		
 		
 	</body>
 

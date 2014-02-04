@@ -229,7 +229,6 @@ id integer unsigned auto_increment  primary key
 ,categoria varchar(20) not null 
 ,descripcion varchar (250) not null 
 ,precio decimal (5,2) not null
-,fecha_compra timestamp not null 
-,fecha_venta timestamp null
+,fecha_compra timestamp not null default current_timestamp()
 )
 engine = myisam;

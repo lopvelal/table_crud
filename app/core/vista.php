@@ -18,7 +18,7 @@ class Vista extends \core\Clase_Base {
 			$fichero_vista = strtolower(PATH_APP."vistas/").str_replace("\\", "/", $nombre).".php";
 		}
 		else {
-			$fichero_vista = strtolower(PATH_APP."vistas/".\core\Aplicacion::$controlador->datos['controlador_clase']."/$nombre.php");
+			$fichero_vista = strtolower(PATH_APP."vistas/".\core\Controlador::get_controlador_instanciado()."/$nombre.php");
 		}
 		
 		if ( ! file_exists($fichero_vista))

@@ -41,8 +41,8 @@ class Configuracion {
 	// localhost
 	public static $db = array(
 		'server'   => 'localhost',
-		'user'     => 'daw2_bencanse',
-		'password' => 'daw2_bencanse',
+		'user'     => 'root',
+		'password' => 'root',
 		'db_name'  => 'daw2_table_crud',
 		'prefix_'  => 'daw2_'
 	);
