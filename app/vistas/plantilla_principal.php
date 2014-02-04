@@ -22,9 +22,7 @@
 		<style type="text/css" >
 			/* Definiciones hoja de estilos interna */
 		</style>
-		<?php if (isset($_GET["administrator"])): ?>
-		<link rel="stylesheet" type="text/css" href="<?php echo URL_ROOT; ?>recursos/css/administrator.css" />
-		<?php endif; ?>
+		
 		
 		
 		<script src="<?php echo URL_ROOT?>recursos/js/jquery/jquery-1.10.2.min.js"></script>
@@ -37,6 +35,7 @@
 		<div id="inicio"></div>
 		<div id="encabezado">
 			<img src="<?php echo URL_ROOT; ?>recursos/imagenes/trg0ki1391370510.gif" alt="logo" style ="margin-left:30%;"title="Logo"/>
+                        <h1>Alfonso López Velasco</h1>
 			<!--<img src="<?php echo URL_ROOT; ?>recursos/imagenes/departamento_informatica.png" alt="logo" title="Logo departamento"  onclick="window.location.assign('http://www.iespalomeras.net/index.php?option=com_wrapper&view=wrapper&Itemid=86');" />-->
 			
 		</div>
@@ -68,18 +67,16 @@
 			
 		</div>
 
+                <!--<hr width="100%"/>-->
 	
-		<div id="pie" style="float:left;">
-			<br/>
-			<br/>
-			<br/>
-			<br/>
+		<div id="pie" style="">  
 			Pie del documento.<br />
-			Documento creado por Alfonso López Velasco y Sergio Benito Cano.
-			FRUTAS PALOMERAS<br />
+			Documento creado por Alfonso López Velasco.<br/>
+                        Fecha última áctualización: 04/02/2014 
+			FRUTAS PALOMERAS<br/><br/>
 		</div>
 		
-		<?php echo \core\HTML_Tag::post_request_form(); ?>
+		<?php // echo \core\HTML_Tag::post_request_form(); ?>
 		
 	</body>
 

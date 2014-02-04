@@ -51,3 +51,7 @@ table a:hover{
 table a:visited{
     color:#FF704D;
 }
+#pie{
+    background-color: #C0C0C0;
+    height: 100px;
+}
