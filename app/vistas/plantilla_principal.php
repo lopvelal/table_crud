@@ -38,7 +38,7 @@
 		<div id="encabezado">
                     
 			<img src="<?php echo URL_ROOT; ?>recursos/imagenes/trg0ki1391370510.gif" alt="logo" style ="margin-left:30%;"title="Logo"/>
-                        <h1>Sergio Benito</h1>
+                        <h1>Alfonso López Velasco</h1>
 			<!--<img src="<?php echo URL_ROOT; ?>recursos/imagenes/departamento_informatica.png" alt="logo" title="Logo departamento"  onclick="window.location.assign('http://www.iespalomeras.net/index.php?option=com_wrapper&view=wrapper&Itemid=86');" />-->
 			
 		</div>
@@ -77,7 +77,7 @@
 			<br/>
 			
 			Pie del documento.<br />
-			Documento creado por Sergio Benito Cano.<br/>
+			Documento creado por Alfonso López Velasco.<br/>
                         Fecha de creacion: 04/02/2014.<br/>
 			FRUTAS PALOMERAS<br />
 		</div>

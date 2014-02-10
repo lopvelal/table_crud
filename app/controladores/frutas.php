@@ -5,7 +5,7 @@ namespace controladores;
 class frutas extends \core\Controlador {
 
     /**
-     * Presenta una <table> con las filas de la tabla con igual nombre que la clase.
+     * Presenta una <table> de frutas con las filas de la tabla con igual nombre que la clase.
      * @param array $datos
      */
     public function index(array $datos = array()) {
@@ -41,7 +41,7 @@ class frutas extends \core\Controlador {
         if (!$validacion = !\core\Validaciones::errores_validacion_request($validaciones, $datos))
             $datos["errores"]["errores_validacion"] = "Corrige los errores.";
         else {
-            //Convertimos la fecha de formato europeo a formato mysql. Primero añadimos guiones entre los datos y luego convertimos
+            //Convertimos el precio a formato MySQL para que nos devuelva el precio de manera que podamos introducirlo en la base de datos.
             $datos['values']['precio'] = \core\Conversiones::decimal_coma_a_punto($datos['values']['precio']);
             if (!$validacion = \modelos\Modelo_SQL::insert($datos["values"], 'frutas')) // Devuelve true o false
                 $datos["errores"]["errores_validacion"] = "No se han podido grabar los datos en la bd.";
@@ -107,6 +107,7 @@ class frutas extends \core\Controlador {
 
             $datos["errores"]["errores_validacion"] = "Corrige los errores.";
         } else {
+	    //Convertimos el precio a formato MySQL para que nos devuelva el precio de manera que podamos introducirlo en la base de datos.
 	    $datos['values']['precio'] = \core\Conversiones::decimal_coma_a_punto($datos['values']['precio']);
             if (!$validacion = \modelos\Datos_SQL::update($datos["values"], 'frutas')) // Devuelve true o false
                 $datos["errores"]["errores_validacion"] = "No se han podido grabar los datos en la bd.";

@@ -39,21 +39,32 @@ class Configuracion {
 	
 	
 	// localhost
+	/**
+	 *
+	 * @var array= Collecion de datos para iniciar sesion en MySQL desde localhost
+	 * 
+	 */
 	public static $db = array(
 		'server'   => 'localhost',
 		'user'     => 'root',
-		'password' => '',
+		'password' => '', //en mi casa root no tiene pass, en clase si
 		'db_name'  => 'daw2_table_crud',
 		'prefix_'  => 'daw2_'
 	);
 	
-
-	// hostinger
+	
+	/**
+	 *
+	 * @var array= Collecion de datos para iniciar sesion en MySQL desde hostinger
+	 * 
+	 */
+	
+	//hostinger
 //	public static $db = array(
 //		'server'   => 'mysql.hostinger.es',
-//		'user'     => 'u452950836_daw2',
-//		'password' => 'u452950836_daw2',
-//		'db_name'   => 'u452950836_daw2',
+//		'user'     => 'u873588124_daw2',
+//		'password' => 'lopvelal_',
+//		'db_name'   => 'u873588124_daw2',
 //		'prefix_'  => 'daw2_'
 //	);
 	
